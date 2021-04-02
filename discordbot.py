@@ -2,6 +2,7 @@ import discord
 import asyncio
 from random import *
 import time
+import os
 
 client=discord.Client()
 
@@ -180,7 +181,7 @@ async def on_message(message):
         time.sleep(1)
         await message.channel.send("이상 곰탱이봇이였습니다 감사합니다")
 
+access_token=os.environ["BOT_TOKEN"]
 
-
-client.run('ODIyNzI4NDQ4NTMwNDQ4NDA2.YFWfkw.h3iFTduPnhOvqiILellIUGfB6LE')
+client.run(access_token)
 
